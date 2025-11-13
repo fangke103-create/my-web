@@ -1,14 +1,121 @@
-<!DOCTYPE html>
-<html lang="">
-  <head>
+!DOCTYPE html>
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
+    <title>今天想不开也吃草吗？</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-O5KrXrDM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Dfn89ep_.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+    <style>
+        body {
+            position: relative; 
+            margin: 0; 
+            padding: 0;
+            /* 替换为32×32px透明山田凉头像（稳定图床链接） */
+            cursor: url('https://imgtu.com/images/2025/11/15/ryoko_cursor_32.png'), auto;
+        }
+        /* 背景图伪元素 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://www.imgur.la/images/2025/11/13/_20251113131324_338_2.md.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5; 
+            z-index: -1; 
+        }
+        /* 内容全局居中 */
+        .container {
+            text-align: center; 
+            margin: 0 auto; 
+        }
+        .side, .card, .post {
+            margin: 0 auto; 
+        }
+        ul.count {
+            list-style: none; 
+            padding: 0; 
+            text-align: center; 
+        }
+        /* 头像圆形边框 */
+        .card img {
+            width: 200px;
+            height: 200px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+        }
+        /* 按钮样式 */
+        .btn {
+            display: inline-block; 
+            background-color: #00008B; 
+            color: #fff; 
+            padding: 8px 16px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #000066; 
+        }
+        /* 原有样式优化 */
+        .card {
+            padding: 20px;
+        }
+        .excerpt {
+            color: #00008B;
+            line-height: 1.8;
+        }
+        .footer small {
+            color: #00008B;
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <div class="container">
+            <strong>哈喽友友们</strong> 这是我的主页~
+        </div>
+    </header>
+    <div class="container main">
+        <aside class="side">
+            <div class="card">
+                <a href="https://www.imgur.la/image/%E5%B1%B1%E5%A4%A9%E4%BA%AE.6R1g67">
+                    <img src="https://www.imgur.la/images/2025/11/13/31b8e67facb8ec426b4e27d0dc22f263.md.png" alt="凉">
+                </a>
+                <h1 class="name">贩客</h1>
+                <p class="bio">19岁</p>
+                <ul class="count">
+                    <li><b>沉迷睡大觉</b></li>
+                    <li><b>美味的甜品和酷酷的凉酱使我旋转~</b></li>
+                </ul>
+                <a class="btn" href="mailto:3535709441@qq.com">我的邮箱</a>
+            </div>
+            <article class="post">
+                <h2>我的简介</h2>
+                <p class="excerpt">
+                    喜好甜品，旅游，等一切有趣的玩意<br>
+                    爱好同人，虽然现在忙的啥也没看（（<br>
+                    喜欢eve老师的歌曲OvO~<br>
+                    新奇的番剧烦请推我，我一定要抽时间看呜呜呜
+                </p>
+                <div class="meta"></div>
+            </article>
+        </aside>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <small>© 2025 贩客  想认识我？来！ fk173201（微信号）</small>
+        </div>
+    </footer>
+    <!-- 标签页标题切换 -->
+    <script>
+        const originalTitle = document.title;
+        document.addEventListener('visibilitychange', () => {
+            document.title = document.hidden ? '不要我了吗呜呜' : originalTitle;
+        });
+    </script>
+</body>
 </html>
